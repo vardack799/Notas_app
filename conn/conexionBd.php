@@ -1,25 +1,26 @@
 <?php
+class ConexionDb
+{
+    private $server_db='127.0.0.1';
+    private $user_db='root';
+    private $pwd_db='';
+    private $name_db='notas_bd';
+    private $conex;
 
-//conectar abase de datos 
+    function __construct(){
+        $this->conex = new mysqli($this->server_db, $this->user_db, $this->pwd_db, $this->name_db);
+    }
 
-$servidor = "localhost"; //127.0.0.1
-$usuario = "root";
-$contrasena = ""; 
+    function execSQL($sql){
+        return $this->conex->query($sql);
+    }
 
-try{
-    //pdo permite conectar a la base de datos
-    $conexion= new PDO("mysql:host=$servidor;dbname=notas_bd", $usuario,$contrasena );
-    $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-     
-    echo "conexion establecida";
+    function close(){
+        $this->conex->close();
+    }
 
-
-    
-}catch(PDOException $error){
-    echo "conexion erronea".$error;
-    die();
-
-
+    function validarConexion(){
+        return $this->conex->connect_error;
+    }
 }
-
 ?>
