@@ -57,7 +57,7 @@
         </label>
         <label>
             <span>Nota: </span>
-            <input type="number" name="nota" min="0" step="0.01" max = "5"  value="<?php echo $actividad->getNota(); ?>" require>
+            <input type="number" name="nota" min="0" step="any" max = "5"  value="<?php echo $actividad->getNota(); ?>" require>
             <br>
         </label>
         <input type="hidden" name="id" value="<?php echo $id ?>">
