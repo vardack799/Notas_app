@@ -47,7 +47,8 @@
                     echo '</td>';
                     echo '</tr>';
                 }
-                    // if($estudiante->getCodigo() == "" || empty(trim($estudiante->getNombre())) || empty(trim($estudiante->getApellido()))){
+                
+                    // if($estudiante -> getCodigo() == "" || empty(trim($estudiante -> getNombre())) || empty(trim($estudiante -> getApellido()))){
                     //     echo '<script>';
                     //     echo 'alert("por favor registre completamente los campos");';
                     //     echo '</script>';

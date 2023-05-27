@@ -93,7 +93,7 @@
             <p><?php echo $imprimir ?></p>
 
                 <?php
-
+                // ingresa en un formulario oculto con datos ya anteriormente llenados 
                 echo '<form action="views/formularioAct.php" method="post">';
                 echo '<input type="hidden" name="codigo" value="' . $codigoEstudiante . '">';
                 echo '<input type="hidden" name="nombre" value="' . $nombreEstudiante . '">';
